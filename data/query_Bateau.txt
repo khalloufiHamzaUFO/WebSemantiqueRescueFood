@@ -1,0 +1,7 @@
+PREFIX ns: <http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?property ?value
+WHERE {
+    ns:Couscous ?property ?value .
+}

@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX transport: <http://www.semanticweb.org/ontologies/5twin6/scaredtocompile/transport#>
+
+SELECT ?voiture  ?model ?marque ?regulationR ?regulationP ?vitesseMoyenneRoute ?ceintures_de_Sécurité
+WHERE {
+  ?voiture rdf:type transport:Voiture .
+  ?voiture transport:soumisAReglement ?regulationR.
+  ?voiture transport:implemente ?regulationP.
+  ?voiture transport:Marque ?marque.
+  ?voiture transport:Model ?model .
+  ?regulationR transport:VitesseMoyenne ?vitesseMoyenneRoute .
+  ?regulationP transport:Ceintures_de_Sécurité ?ceintures_de_Sécurité
+
+}

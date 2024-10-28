@@ -1,0 +1,24 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX transport: <http://www.semanticweb.org/ontologies/5twin6/scaredtocompile/transport#>
+
+SELECT DISTINCT ?nom ?prenom ?nationalite ?age
+WHERE {
+  ?user rdf:type transport:Personne .
+
+  {
+    ?user transport:Possede ?voiture .
+    ?voiture rdf:type transport:Voiture .
+  }
+
+  UNION
+
+  {
+    ?user transport:Possede ?velo .
+    ?velo rdf:type transport:Velo .
+  }
+
+  ?user transport:Nom ?nom .
+  ?user transport:Prenom ?prenom .
+  ?user transport:Nationalite ?nationalite .
+  ?user transport:Age ?age .
+}

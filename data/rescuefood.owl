@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#"
+     xml:base="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <owl:Ontology rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#belongsToFranchise -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#belongsToFranchise">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasBlog -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasBlog">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasCategory">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasComment">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasFood -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasFood">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasFranchise -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasFranchise">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Stock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasNutritionInfo -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasNutritionInfo">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasOrderLine -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasOrderLine">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasOwner">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasRestaurant -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasRestaurant">
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#RestaurantOwner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasStock -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#hasStock">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Stock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#referencesFood -->
+
+    <owl:ObjectProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#referencesFood">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:range rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#calories -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#calories">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#carbohydrates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#carbohydrates">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#categoryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#categoryName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#commentContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#commentContent">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#commentCreatedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#commentCreatedAt">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#content">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#coverImage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#coverImage">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#createdAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#createdAt">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#dateOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#dateOrder">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#description">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#email">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#fats -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#fats">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#firstName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#foodName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#foodName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#franchiseLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#franchiseLocation">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#franchiseName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#franchiseName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#fullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#fullName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#image -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#image">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#ingredients -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#ingredients">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#isCollected -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#isCollected">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#lastName">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#mapsLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#mapsLocation">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#nbFoods -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#nbFoods">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#password -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#password">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#price">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#protein -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#protein">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#quantity">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#reference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#reference">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#restaurantLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#restaurantLocation">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#role -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#role">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#servingSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#servingSize">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#slug -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#slug">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#status">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#stockTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#stockTotal">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#title">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#total -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#total">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#totalPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#totalPrice">
+        <rdfs:domain rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#AdminUser -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#AdminUser">
+        <rdfs:subClassOf rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#FoodCategory -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#FoodCategory">
+        <rdfs:subClassOf rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#RestaurantOwner -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#RestaurantOwner">
+        <rdfs:subClassOf rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Stock -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Stock"/>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User -->
+
+    <owl:Class rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Commentaire_de_Wiem_Ben_Araar -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Commentaire_de_Wiem_Ben_Araar">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Comment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Food"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous_(Quantité:_2,_Prix_unitaire:_1.50_TND,_Total:_3.00_TND) -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous_(Quantité:_2,_Prix_unitaire:_1.50_TND,_Total:_3.00_TND)">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#OrderLine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous_(Quantité:_50,_Prix:_1.50_TND) -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Couscous_(Quantité:_50,_Prix:_1.50_TND)">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Stock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Discover_Tunisian_Cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Discover_Tunisian_Cuisine">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Blog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Fedi_Ben_Amor -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Fedi_Ben_Amor">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#RestaurantOwner"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Halal -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Halal">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#FoodCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Information_nutritionnelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Information_nutritionnelle">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#NutritionInfo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#ORD12345 -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#ORD12345">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Order"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Plat_Principal -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Plat_Principal">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant_El-Madina -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant_El-Madina">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Restaurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Tunis -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Tunis">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Franchise"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Wiem_Ben_Araar -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Wiem_Ben_Araar">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#AdminUser"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Yessine_Ben_Salah -->
+
+    <owl:NamedIndividual rdf:about="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#Yessine_Ben_Salah">
+        <rdf:type rdf:resource="http://www.rescuefood.org/ontologies/2024/rescue-food-ontology#User"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
